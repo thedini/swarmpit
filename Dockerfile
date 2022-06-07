@@ -1,6 +1,7 @@
+
 FROM debian:buster-slim
 
-RUN apt-get update && \
+RUN apt-get update && apt-get upgrade -y && \
     mkdir -p /usr/share/man/man1 && \
     apt-get install -y ca-certificates curl openjdk-11-jre-headless libjffi-java
 
